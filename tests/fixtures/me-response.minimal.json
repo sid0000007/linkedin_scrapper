@@ -1,0 +1,15 @@
+{
+  "_fixtureNote": "SYNTHETIC minimal /me response — no picture/backgroundImage, exercises graceful degradation.",
+  "data": {
+    "*miniProfile": "urn:li:fs_miniProfile:EXAMPLE2"
+  },
+  "included": [
+    {
+      "entityUrn": "urn:li:fs_miniProfile:EXAMPLE2",
+      "firstName": "Alex",
+      "lastName": "Chen",
+      "occupation": "Product Manager",
+      "publicIdentifier": "alex-chen"
+    }
+  ]
+}

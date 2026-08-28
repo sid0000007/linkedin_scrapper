@@ -1,0 +1,4 @@
+0:["$","div",null,{"children":[["$","$L4",null,{"componentKey":"com.linkedin.sdui.profile.card.refHASHEducationTopLevelSection","children":"$L1"}],["$","$L4",null,{"componentKey":"com.linkedin.sdui.profile.card.refHASHCertificationTopLevel","children":"$L2"}]]}]
+1:["$","div",null,{"children":[["$","p",null,{"className":"x","children":["State University"]}],["$","p",null,{"className":"x","children":["B.S. Computer Science"]}]]}]
+2:["$","div",null,{"children":[["$","p",null,{"className":"x","children":["Cloud Practitioner"]}],["$","p",null,{"className":"x","children":["Amazon Web Services"]}],["$","p",null,{"className":"x","children":["Issued Jan 2023"]}],["$","p",null,{"className":"x","children":["Credential ID XYZ123"]}]]}]
+4:["aaaa",[],"ClientComponent"]

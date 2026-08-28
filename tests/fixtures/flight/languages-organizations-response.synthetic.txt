@@ -1,0 +1,3 @@
+0:["$","div",null,{"children":[["$","$L4",null,{"componentKey":"com.linkedin.sdui.profile.card.refHASHLanguageTopLevel","children":"$L1"}]]}]
+1:["$","div",null,{"children":[["$","$L4",null,{"componentKey":"entity-collection-item-one","children":[["$","p",null,{"className":"x","children":["English"]}],["$","p",null,{"className":"x","children":["Native or bilingual proficiency"]}]]}],["$","$L4",null,{"componentKey":"entity-collection-item-two","children":[["$","p",null,{"className":"x","children":["Spanish"]}],["$","p",null,{"className":"x","children":["Professional working proficiency"]}]]}]]}]
+4:["aaaa",[],"ClientComponent"]

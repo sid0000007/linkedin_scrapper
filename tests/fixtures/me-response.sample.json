@@ -1,0 +1,29 @@
+{
+  "_fixtureNote": "SYNTHETIC, but shaped exactly like the CONFIRMED real /voyager/api/me response documented in docs/RESEARCH.md (data/*miniProfile pointer resolved via included[] by entityUrn) — not a live capture of real personal data.",
+  "data": {
+    "*miniProfile": "urn:li:fs_miniProfile:EXAMPLE1"
+  },
+  "included": [
+    {
+      "entityUrn": "urn:li:fs_miniProfile:EXAMPLE1",
+      "firstName": "Jordan",
+      "lastName": "Rivera",
+      "occupation": "Senior Software Engineer at Example Corp",
+      "publicIdentifier": "jordan-rivera-example",
+      "picture": {
+        "rootUrl": "https://media.licdn.com/dms/image/v2/EXAMPLE/profile-displayphoto-",
+        "artifacts": [
+          { "width": 100, "height": 100, "fileIdentifyingUrlPathSegment": "scale_100_100/example-photo-100" },
+          { "width": 400, "height": 400, "fileIdentifyingUrlPathSegment": "scale_400_400/example-photo-400" }
+        ]
+      },
+      "backgroundImage": {
+        "rootUrl": "https://media.licdn.com/dms/image/v2/EXAMPLE/profile-displaybackgroundimage-",
+        "artifacts": [
+          { "width": 200, "height": 80, "fileIdentifyingUrlPathSegment": "200_800/example-bg-200" },
+          { "width": 1400, "height": 350, "fileIdentifyingUrlPathSegment": "350_1400/example-bg-1400" }
+        ]
+      }
+    }
+  ]
+}
