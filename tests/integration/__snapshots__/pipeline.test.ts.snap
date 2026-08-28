@@ -1,0 +1,90 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`full pipeline (raw sources -> Flight parser / HTML extraction -> domain parsers -> normalizer -> schema) > produces the expected Profile shape for fully-populated sources, including the real captured top-card HTML 1`] = `
+{
+  "about": undefined,
+  "backgroundImage": {
+    "url": "https://media.licdn.com/dms/image/v2/EXAMPLE/profile-displaybackgroundimage-350_1400/example-bg-1400",
+  },
+  "certifications": [
+    {
+      "issueDate": "Jan 2023",
+      "issuingOrganization": "Amazon Web Services",
+      "name": "Cloud Practitioner",
+    },
+  ],
+  "education": [
+    {
+      "degree": "B.S. Computer Science",
+      "school": "State University",
+    },
+  ],
+  "experience": [
+    {
+      "company": "Acme Corp · Full-time",
+      "description": "Shipped the widget platform.",
+      "endDate": undefined,
+      "location": "Remote",
+      "startDate": "Jan 2023",
+      "title": "Staff Engineer",
+    },
+    {
+      "company": "Initech · Contract",
+      "description": undefined,
+      "endDate": "Dec 2022",
+      "location": "Austin, Texas · Hybrid",
+      "startDate": "Jun 2020",
+      "title": "Software Engineer",
+    },
+  ],
+  "headline": "AI Fullstack Engineer | React • Next.js • Python • TypeScript • LLMs • Agents • AWS | Ex Fullstack Engineeri -Cybership | Co-founder @ Daccotta",
+  "image": {
+    "url": "https://media.licdn.com/dms/image/v2/EXAMPLE/profile-displayphoto-scale_400_400/example-photo-400",
+  },
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "Native or bilingual proficiency",
+    },
+    {
+      "name": "Spanish",
+      "proficiency": "Professional working proficiency",
+    },
+  ],
+  "location": {
+    "city": "Gurugram",
+    "country": "India",
+    "raw": "Gurugram, Haryana, India",
+  },
+  "name": {
+    "firstName": "Jordan",
+    "fullName": "Siddharth Gupta",
+    "lastName": "Rivera",
+  },
+  "publicIdentifier": "jordan-rivera-example",
+  "skills": [],
+  "url": "https://www.linkedin.com/in/siddharthgupta007/",
+}
+`;
+
+exports[`full pipeline (raw sources -> Flight parser / HTML extraction -> domain parsers -> normalizer -> schema) > produces the expected Profile shape for minimal/empty sources without throwing 1`] = `
+{
+  "about": undefined,
+  "backgroundImage": undefined,
+  "certifications": [],
+  "education": [],
+  "experience": [],
+  "headline": "Product Manager",
+  "image": undefined,
+  "languages": [],
+  "location": undefined,
+  "name": {
+    "firstName": "Alex",
+    "fullName": "Alex Chen",
+    "lastName": "Chen",
+  },
+  "publicIdentifier": "alex-chen",
+  "skills": [],
+  "url": "https://www.linkedin.com/in/alex-chen/",
+}
+`;
