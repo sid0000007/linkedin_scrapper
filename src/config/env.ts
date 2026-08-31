@@ -18,6 +18,12 @@ const envSchema = z.object({
   API_KEY: z.string().min(1).optional(),
   RATE_LIMIT_MAX: z.coerce.number().int().positive().default(100),
   RATE_LIMIT_WINDOW_MS: z.coerce.number().int().positive().default(60_000),
+
+  // Self-ping keeps free-tier hosts (Render) from spinning down on idle. SELF_URL is an
+  // explicit override; RENDER_EXTERNAL_URL is auto-injected by Render itself — no config
+  // needed there. Neither set = self-ping just doesn't start (e.g. local dev/test).
+  SELF_URL: z.string().url().optional(),
+  RENDER_EXTERNAL_URL: z.string().url().optional(),
 });
 
 export type Env = z.infer<typeof envSchema>;

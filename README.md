@@ -59,10 +59,20 @@ curl http://localhost:3000/healthz
 | `API_KEY` | for `/v1/profile` to work | — | Shared secret clients must send as `x-api-key` |
 | `RATE_LIMIT_MAX` | no | `100` | Max requests per window, per IP, on `/v1/*` |
 | `RATE_LIMIT_WINDOW_MS` | no | `60000` | Rate-limit window in ms |
+| `SELF_URL` | no | — | Explicit override for self-ping (see below) |
+| `RENDER_EXTERNAL_URL` | no | — | Auto-injected by Render; self-ping uses it if `SELF_URL` isn't set |
 
 `/healthz` works with none of the LinkedIn/API key variables set. `/v1/profile` needs all
 three of `LINKEDIN_LI_AT`, `LINKEDIN_JSESSIONID`, and `API_KEY` — without them you'll get
 a clean `401`/`502` rather than a crash (see [API documentation](#api-documentation)).
+
+### Self-ping (keep-alive)
+
+On startup the server pings its own `GET /healthz` every 5 minutes
+(`src/utils/self-ping.ts`), using `SELF_URL` or Render's auto-injected
+`RENDER_EXTERNAL_URL` as the base. This is purely to stop Render's free tier from spinning
+the service down after ~15 minutes idle — if neither variable is set (e.g. local dev), it
+silently no-ops. No new endpoint to call from outside; it's the server pinging itself.
 
 ### Docker
 
@@ -334,4 +344,3 @@ live call to linkedin.com or requires real credentials.
   server-side; a fresh random value is sent per request to mimic real browser behavior.
 - **Deployment cold-start behavior on Render's free/starter tier** (if used) hasn't been
   characterized yet — to be filled in once actually deployed.
-# linkedin_scrapper
